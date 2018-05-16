@@ -3,12 +3,11 @@
 
 
 
-char ssid[] = "Canhotspot";
-char password[] = "12457800";
+char ssid[] = "XXXXXXX";  //CHANGE TO YOUR OWN HOTSPOT AND PASSWORD
+char password[] = "XXXXXXXX";
 
-char host[] = "cqm83waqe0.execute-api.us-east-1.amazonaws.com"; //xxxxxxx.execute-api.us-east-1.amazonaws.com
-//String URL = "/prod/call?DestinationPhoneNumber=%2B16087381977&ContactFlowId=2d213e3d-c6e3-42a3-9ca8-8faf1455ecbf&InstanceId=33de395b-9b5e-4ed2-b4d0-4b2d42fcdc1c&SourcePhoneNumber=%2B13473942645";
-String URL = "/prod/blast";
+char host[] = "YOUR-API-GATEWAY-GET-ENDPOINT"; //CHANGE TO API DEPLOYMENT ROOT PATH";
+String URL = "/prod/blast";  //CHANGE TO API GATEWAY RESOURCE PATH
 int val;
 int loopComplete = 1;
 WiFiClientSecure client;
@@ -46,55 +45,8 @@ void setup()
   IPAddress ip = WiFi.localIP();
   Serial.println(ip);
 
-
-
-
-
-
-  //    while (client.available())
-  //    {
-  //      char c = client.read();
-  //
-  //      if (finishedHeaders)
-  //      {
-  //        body = body + c;
-  //      }
-  //      else
-  //      {
-  //        if (currentLineIsBlank && c == '\n')
-  //        {
-  //          finishedHeaders = true;
-  //        }
-  //        else
-  //        {
-  //          headers = headers + c;
-  //        }
-  //      }
-  //
-  //      if (c == '\n')
-  //      {
-  //        currentLineIsBlank = true;
-  //      }
-  //      else if (c != '\r')
-  //      {
-  //        currentLineIsBlank = false;
-  //      }
-  //
-  //      gotResponse = true;
-  //    }
-  //    if (gotResponse)
-  //      return body;
-  //  }
-
-  //return body;
-}
-
 void loop() {
-  //  delay(500);
-  //  digitalWrite(LED_BUILTIN, LOW);
-  //  delay(500);
-  //  digitalWrite(LED_BUILTIN, HIGH);
-
+  
   loopComplete = 1;
   Serial.println(val);
   val = analogRead(A0);
