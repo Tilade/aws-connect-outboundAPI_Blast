@@ -1,5 +1,3 @@
-#created May 2018 for NYC Roundtable. Have a ?, find cannadw@
-
 import boto3
 import time
 
